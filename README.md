@@ -1,7 +1,7 @@
 # server_base
 Server con NodeJS y Express
 
-# Para clonar en su pc
+# Para clonar:
 
 git clone https://github.com/PailletJuanPablo/server_base.git
 
