@@ -27,8 +27,11 @@ app.use((req, res, next) => {
 let puerto = 1234;
 
 // Especificamos la base hacia donde nos conectaremos
-let direccionBaseDatos =
-  "mongodb://curso:curso1234@ds149672.mlab.com:49672/curso_mm"; 
+// let direccionBaseDatos = 'mongodb://localhost:27017/nombre_base';
+// Si están en su entorno local, la variable sería algo así
+// En este caso nos conectaremos a una base remota
+let direccionBaseDatos = "mongodb://curso:curso1234@ds149672.mlab.com:49672/curso_mm"; 
+
 
 // Ejecutamos el método connect de la variable que contiene a Mongoose
 mongoose.connect(
@@ -53,4 +56,3 @@ mongoose.connect(
 // Importamos y utilizamos las rutas
 var rutas_base= require("./rutas/rutas_base");
 app.use('/elementos',rutas_base);
-
