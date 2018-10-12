@@ -49,18 +49,8 @@ mongoose.connect(
   }
 );
 
-//Importamos el controlador
-let catController = require('./controladores/controlador_categoria');
-let prodController = require('./controladores/controlador_producto');
-//Rutas de categorías
-app.get('/categorias',catController.listarCategorias);
-app.post('/categorias',catController.crearCategoria);
-app.get('/categorias/:id',catController.verCategoria);
-app.post('/categorias/:id',catController.actualizarCategoria);
-app.post('/categorias/eliminar/:id',catController.eliminarCategoria);
-app.get('/ver-por-categoria/:id',catController.verPorCategoria);
 
-//Rutas de Productos
-app.get('/productos',prodController.listarProductos);
-app.post('/productos',prodController.crearProducto);
-app.get('/productos/:id',prodController.verProducto);
+// Importamos y utilizamos las rutas
+var rutas_base= require("./rutas/rutas_base");
+app.use('/elementos',rutas_base);
+
