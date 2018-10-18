@@ -5,7 +5,7 @@ var router = express.Router();
 //Importamos el controlador del elemento
 let elementoController = require('../controladores/controlador_elemento');
 //Importamos método para verificar si el usuario está logueado
-var verificarUsuario = require('../middlewares/authenticated');
+var verificarUsuario = require('../middlewares/auth');
 
 //Rutas de categorías
 router.get('/',verificarUsuario,elementoController.obtenerElementos);

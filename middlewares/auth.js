@@ -4,7 +4,6 @@
 
 // Importamos jwy y moment
 var jwt = require("jwt-simple");
-var moment = require("moment");
 
 // Definimos clave secreta para el hash
 var secret = "claveSecreta";
