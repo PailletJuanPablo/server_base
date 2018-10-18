@@ -1,6 +1,6 @@
 // Importamos los modelos Mongoose para poder acceder a sus metodos
 // En este caso es un elemento de demo, deberán importar los que hayan creado
-var Elemento = require("../modelos/categoria");
+var Elemento = require("../modelos/elemento");
 
 // ------------------------------------
 // Método para obtener todos los elementos
