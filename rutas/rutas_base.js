@@ -4,8 +4,11 @@ var express = require('express');
 var router = express.Router();
 //Importamos el controlador del elemento
 let elementoController = require('../controladores/controlador_elemento');
+//Importamos método para verificar si el usuario está logueado
+var verificarUsuario = require('../middlewares/authenticated');
+
 //Rutas de categorías
-router.get('/',elementoController.obtenerElementos);
+router.get('/',verificarUsuario,elementoController.obtenerElementos);
 router.post('/',elementoController.crearElemento);
 router.get('/elementos/:id',elementoController.verElemento);
 router.post('/elementos/:id',elementoController.actualizarElemento);
